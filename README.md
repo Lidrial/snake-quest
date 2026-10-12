@@ -46,7 +46,7 @@ snake-quest/
 - [ ] Score
 - [ ] Game over
 
-# Équipe
+## Équipe
 
 - Rémy Nicolas
 - À compléter
