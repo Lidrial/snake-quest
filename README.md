@@ -6,9 +6,13 @@ Jeu de snake réalisé avec Godot.
 
 ## Les règles d'or
 
-- Toujours Fetch / Pull avant de commencer à travailler.
+- Une tâche = une branche, créée depuis main à jour. Son nom est donné dans l'encadré « Git » de chaque tâche (ex. p1-e2-nourriture).
+- Jamais de commit directement sur main : main ne change que par des Pull Requests.
+- Pas de fork : un seul dépôt GitHub (origin), où vous publiez vos branches.
+- Chaque Pull Request est relue par l'autre avant la fusion.
 - Des petits commits fréquents, avec des messages clairs (« Ajoute la scène Food »).
-- Une scène `.tscn` = une seule personne à la fois. Annoncez-vous : « je prends main.tscn ».
+- Une scène .tscn = une seule personne à la fois, même sur des branches différentes : les scènes se fusionnent très mal. Annoncez-vous : « je  prends main.tscn ».
+- Après une fusion : retour sur main, Pull, et suppression de la branche.
 - Un conflit ? Pas de panique, on ne force rien : on appelle Rémy.
 
 ## Prérequis
