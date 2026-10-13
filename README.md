@@ -50,3 +50,4 @@ snake-quest/
 
 - Rémy Nicolas
 - À compléter
+- Elton était là
