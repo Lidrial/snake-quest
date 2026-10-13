@@ -14,6 +14,10 @@ config/name="snake-quest"
 run/main_scene="uid://d05rv6dtgifyx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+Events="*uid://dtkkwp7q4pbxs"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=1
