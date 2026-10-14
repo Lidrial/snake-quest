@@ -12,3 +12,5 @@ position = Vector2(80, 100)
 [node name="Timer" type="Timer" parent="." unique_id=2083893483]
 wait_time = 0.2
 autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
