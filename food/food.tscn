@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://dbp4x56ukoo6a"]
 
-[node name="Food" type="Node2D" unique_id=1279248776]
+[ext_resource type="Script" uid="uid://cehomahucoiph" path="res://food/food.gd" id="1_afhtg"]
+
+[node name="Food" type="Node2D" unique_id=1367578342]
+script = ExtResource("1_afhtg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1097711488]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 28.0
+offset_bottom = 28.0
+color = Color(0.9372549, 0.26666668, 0.26666668, 1)

@@ -1,11 +1,17 @@
-extends Node
+extends Node2D
 
+const CELL_SIZE := 32
 
-# Called when the node enters the scene tree for the first time.
+# Vector2i : le i pour int. il est mis à 0
+var grid_pos := Vector2i.ZERO
+
 func _ready() -> void:
-	pass # Replace with function body.
+	# Quand on veux bouger Food, on le place
+	Events.food_moved.connect(place)
+	#Events.food_moved.emit(Vector2i(5, 5))   # test temporaire
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Reçoit une position de la cellule souhaité
+func place(cell: Vector2i) -> void:
+	grid_pos = cell
+# On place Food à l'endroit souhaité
+	position = Vector2(cell * CELL_SIZE)
