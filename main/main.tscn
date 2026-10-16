@@ -1,8 +1,23 @@
 [gd_scene format=3 uid="uid://d05rv6dtgifyx"]
 
-[node name="Main" type="Node2D" unique_id=1158200363]
+[ext_resource type="Script" uid="uid://chn0k3ak21id5" path="res://main/main.gd" id="1_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://68jekukhlc2b" path="res://snake/snake.tscn" id="2_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://dq28ms116s1b2" path="res://ui/hud.tscn" id="3_c651c"]
+[ext_resource type="PackedScene" uid="uid://dbp4x56ukoo6a" path="res://food/food.tscn" id="4_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://drrp21jvyrm5g" path="res://world/background.tscn" id="5_3wy1v"]
 
-[node name="Background" type="ColorRect" parent="." unique_id=1182729651]
-offset_right = 640.0
-offset_bottom = 480.0
-color = Color(0.11372549, 0.16862746, 0.12156863, 1)
+[node name="Main" type="Node2D" unique_id=1158200363]
+script = ExtResource("1_pjrb6")
+
+[node name="Background" parent="." unique_id=1423020310 instance=ExtResource("5_3wy1v")]
+
+[node name="Snake" parent="." unique_id=836142271 instance=ExtResource("2_xwkvk")]
+
+[node name="Food" parent="." unique_id=1367578342 instance=ExtResource("4_3wy1v")]
+
+[node name="HUD" parent="." unique_id=1011845356 instance=ExtResource("3_c651c")]
+
+[node name="TickTimer" type="Timer" parent="." unique_id=60151011]
+wait_time = 0.15
+
+[connection signal="timeout" from="TickTimer" to="." method="_on_tick_timer_timeout"]
